@@ -1,0 +1,6 @@
+// 单行显示, 超出显示省略号
+@mixin single-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
