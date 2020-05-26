@@ -1,5 +1,6 @@
 import Taro, { Component } from "@tarojs/taro"
-import { View, ScrollView} from "@tarojs/components"
+import { View, ScrollView } from "@tarojs/components"
+import { AtListItem } from 'taro-ui'
 // import { connect } from '@tarojs/redux'
 // import { add, minus, asyncAdd } from '../../store/actions/todos'
 
@@ -14,8 +15,7 @@ export default class Index extends Component {
       img: 'https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2578705064.jpg',
       title: "理查德·朱维尔的哀歌",
       average: 8.2
-    },
-    a: 1
+    }
   }
 
   config = {
@@ -34,11 +34,13 @@ export default class Index extends Component {
 
   render() {
     return (
-      <View>
+      <View class="index-page">
+        <AtListItem title='影院热映' arrow='right' extraText='查看更多' hasBorder={false}/>
         <ScrollView className="scroll-view" scrollX>
-          <MovieItem obj={this.state.obj} />
-          <View className="scroll-item">2</View>
-          <View className="scroll-item">3</View>
+          {
+            // 外部传入组件内修改样式 statiic externalClasses = ['my-class']
+            Array.from({length: 5}).map(() => <MovieItem obj={this.state.obj} key={new Date()} my-class="item"/>)
+          }
         </ScrollView>
       </View>
     )

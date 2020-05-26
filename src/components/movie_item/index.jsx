@@ -3,10 +3,11 @@ import { AtRate } from 'taro-ui'
 import './index.scss'
 
 export default function MovieItem(props) {
+  
   let { img, title, average } = props.obj
 
   return (
-    <View className="scroll-item">
+    <View className="scroll-item my-class">
       <View>
         <Image src={img} className="img" />
       </View>
@@ -18,6 +19,11 @@ export default function MovieItem(props) {
     </View>
   )
 }
+
+// 外部组件传入类
+MovieItem.externalClasses = ['my-class']
+
+// 默认值
 MovieItem.defaultProps = {
   obj: {
     img: '',

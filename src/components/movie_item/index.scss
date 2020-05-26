@@ -4,7 +4,6 @@
   display: inline-block;
   width: 178px;
   height: 336px;
-  background-color: skyblue;
   overflow: hidden;
   .img {
     width: 100%;
@@ -13,7 +12,7 @@
   }
   .title {
     @include single-line;
-    margin: 5px 0 3px 0;
+    margin: 5px 0;
     font-size: 28px;
     font-weight: 700;
   }
