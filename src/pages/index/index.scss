@@ -1,11 +1,18 @@
 .index-page {
+  padding-bottom: 120px;
   // 滚动区域
   .scroll-view {
     white-space: nowrap;
     box-sizing: border-box;
-    padding-left: 20px;
     .item {
-      margin-right: 20px;
+      margin-left: 20px;
+      &.last {
+        margin-right: 20px;
+      }
     }
+  }
+  // tab 栏
+  .tab-bar {
+    padding: 0;
   }
 }

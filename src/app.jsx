@@ -17,14 +17,23 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
+      navigationBarBackgroundColor: '#42BD56',
       navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
+      navigationBarTextStyle: 'white'
+    },
+    // tabBar: {
+    //   "list": [{
+    //     "pagePath": "pages/index/index",
+    //     "text": "首页"
+    //   },{
+    //     "pagePath": "pages/home/index",
+    //     "text": "其他"
+    //   }]
+    // }
   }
 
   componentDidMount () {}
